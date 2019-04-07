@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app-server",
+    "baseUrl": ".",
+    "paths": {
+      "@agm/core": ["../out-tsc/agm/core"],
+      "@agm/core/*": ["../out-tsc/agm/core/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "entryModule": "app/app.server.module#AppServerModule"
+  }
+}

@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.map {
+  flex: 1;
+}
+
+agm-map {
+  display: block;
+  height: 100%;
+}
