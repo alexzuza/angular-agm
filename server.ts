@@ -13,13 +13,13 @@ import * as path from 'path';
 enableProdMode();
 
 // Express server
-const app = express();
+export const app = express();
 
-const PORT = process.env.PORT || 4000;
+// const PORT = process.env.PORT || 4000;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
 const index = require('fs')
-  .readFileSync(path.resolve(DIST_FOLDER, 'index.html'), 'utf8')
+  .readFileSync(path.resolve(DIST_FOLDER, 'index2.html'), 'utf8')
   .toString();
 
 const domino = require('domino');
@@ -50,10 +50,11 @@ app.get('*.*', express.static(DIST_FOLDER, {
 
 // All regular routes use the Universal engine
 app.get('*', (req, res) => {
-  res.render('index', { req });
+  res.render('index2', { req });
 });
 
 // Start up the Node server
-app.listen(PORT, () => {
+/*app.listen(PORT, () => {
   console.log(`Node Express server listening on http://localhost:${PORT}`);
-});
+});*/
+

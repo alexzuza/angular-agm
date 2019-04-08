@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-// import { AgmCoreModule } from '@agm/core';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    // AgmCoreModule.forRoot({})
+    AgmCoreModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

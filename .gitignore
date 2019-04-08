@@ -45,6 +45,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.firebase
 /functions/dist
-public/*
-!public/.gitkeep
+
