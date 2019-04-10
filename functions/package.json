@@ -9,6 +9,8 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "@angular/fire": "^5.1.2",
+    "firebase": "^5.9.3",
     "firebase-admin": "~7.0.0",
     "firebase-functions": "^2.2.0"
   },

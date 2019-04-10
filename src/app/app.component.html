@@ -1,4 +1,9 @@
 <h1>Angular universal @agm/core firebase</h1>
+<ul>
+  <li class="text" *ngFor="let item of items$ | async">
+    {{item.name}}
+  </li>
+</ul>
 <div class="map">
   <agm-map
     [latitude]="lat"

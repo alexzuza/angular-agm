@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   // google maps zoom level
   zoom = 8;
 
@@ -34,8 +36,16 @@ export class AppComponent {
     }
   ];
 
+  items$: Observable<any[]>;
+
+  constructor(private db: AngularFirestore) {}
+
+  ngOnInit() {
+    this.items$ = this.db.collection('books').valueChanges();
+  }
+
   clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
+    console.log(`clicked the marker: ${label || index}`);
   }
 
   mapClicked($event: any) {
